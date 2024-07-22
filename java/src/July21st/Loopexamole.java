@@ -1,6 +1,6 @@
 package July21st;
 
-public class Loop1 {
+public class Loopexamole {
     public static void main(String[] args) {
         int n=3;
         while(n%2==0){
