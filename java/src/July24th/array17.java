@@ -2,7 +2,7 @@ package July24th;
 
 public class array17 {
     public static void main(String[] args) {
-        int a[]={2,5,7,9,3,1};
+        int[] a ={2,5,7,9,3,1};
         int temp=a[0];
         for (int i=1;i<a.length;i++){
             a[i-1]=a[i];

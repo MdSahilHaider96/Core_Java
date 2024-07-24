@@ -1,3 +1,5 @@
+package July23rd;
+
 import java.util.Scanner;
 
 public class AgSeries4 {
