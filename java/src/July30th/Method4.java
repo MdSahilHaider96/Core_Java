@@ -5,10 +5,8 @@ public class Method4 {
     public void  arraySum(){
         int[] a={4,32,5,6,7,8};
         int sum=a[0];
-        for(int i=0;i<a.length;i++){
-            if(a[i]>0){
-                sum=sum+a[i];
-            }
+        for (int i=1;i<a.length;i++){
+            sum=sum+a[i];
         }
         System.out.println(sum);
     }
