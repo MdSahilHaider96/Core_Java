@@ -10,10 +10,10 @@ public class Array6 {
             c[x]=a[i];
             x++;
         }
-        for (int i=0;i<b.length;i++){
-            c[x]=b[i];
-            x++;
-        }
+//        for (int i=0;i<b.length;i++){
+//            c[x]=b[i];
+//            x++;
+//        }
         for (int p:c){
             System.out.println(p);
         }
