@@ -4,11 +4,11 @@ public class PresentationClass {
     //2.	Create a class Presentation having member variables presentationId, bookedCompanyId, bookedRoomId, startTime, endTime. Create getters and
     //		setters for all member variables. Create object of Presentation class in other class inside main method and set all member values and print
     //		all member values using getters.
-   int presentationId;
-   int bookedCompanyId;
-   int bookedRoomId;
-   int startTime;
-   int endTime;
+   private int presentationId;
+   private int bookedCompanyId;
+   private int bookedRoomId;
+   private int startTime;
+   private int endTime;
 
     public int getPresentatiodId() {
         return presentationId;
@@ -48,5 +48,12 @@ public class PresentationClass {
 
     public void setEndTime(int endTime) {
         this.endTime = endTime;
+    }
+    public void display(){
+        System.out.println(this.presentationId);
+        System.out.println(this.bookedCompanyId);
+        System.out.println(this.bookedRoomId);
+        System.out.println(this.startTime);
+        System.out.println(this.endTime);
     }
 }

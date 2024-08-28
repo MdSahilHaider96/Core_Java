@@ -3,9 +3,9 @@ package August27th;
 public class CategoryClass {
     //	17.	Create a class Categorys having member variables id, categoryName, thumbnails. create getters and setters for all member variables. Create
     //		object of Categorys class in other class inside main method and set all member values and print all member values using getters.
-    int id;
-    String categoryName;
-    String thumbnails;
+     int id;
+     String categoryName;
+      String thumbnails;
 
     public int getId() {
         return id;
@@ -29,5 +29,10 @@ public class CategoryClass {
 
     public void setThumbnails(String thumbnails) {
         this.thumbnails = thumbnails;
+    }
+    public  void display(){
+        System.out.println(this.id);
+        System.out.println(this.categoryName);
+        System.out.println(this.thumbnails);
     }
 }
