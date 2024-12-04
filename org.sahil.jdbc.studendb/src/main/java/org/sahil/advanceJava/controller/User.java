@@ -12,6 +12,12 @@ public class User {
         catch (Exception e){
             e.printStackTrace();
         }
-
+        org.sahil.advanceJava.service.User user = new org.sahil.advanceJava.service.User();
+        try{
+            List<org.sahil.advanceJava.model.User> userList = org.sahil.advanceJava.service.User.findbyname();
+            userList.forEach(System.out::println);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
