@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="org.sahil.jdbc.studendb" />
         <module name="Advanced__Java" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="org.sahil.jdbc.studendb" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>
