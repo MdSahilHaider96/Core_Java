@@ -1,4 +1,8 @@
 package org.sahil.advanceJava.Model;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //To ek code likho
 //2 tables se data lao
 //Ek user table

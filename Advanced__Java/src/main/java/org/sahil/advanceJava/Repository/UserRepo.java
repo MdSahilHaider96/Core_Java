@@ -1,5 +1,6 @@
 package org.sahil.advanceJava.Repository;
 
+import org.sahil.advanceJava.Model.Car;
 import org.sahil.advanceJava.Model.User;
 import util.ConnectionUtil;
 
@@ -220,4 +221,5 @@ public class UserRepo {
         }
         ConnectionUtil.closeConnection();
     }
+
 }
