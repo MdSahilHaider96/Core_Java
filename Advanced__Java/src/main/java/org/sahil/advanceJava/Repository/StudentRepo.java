@@ -9,6 +9,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+//To ek code likho
+//2 tables se data lao
+//Ek user table
+//Ek address table
+//User table ka I'd address table ka liye foreign key hoga
+//Aur ek User ka ek ya oos se zyada bhi address ho sakta hai
+//To User fetch kya I'd se to oos User ka details plus oos ka address list terminal mai display karo
 
 public class StudentRepo {
     private static Connection connection = null;
@@ -64,7 +71,8 @@ public class StudentRepo {
             preparedStatement.setInt(1,id);
             resultSet=preparedStatement.executeQuery();
             while (resultSet.next()){
-                Student  student = new Student(resultSet.getInt(1),resultSet.getString(2),resultSet.getInt(3),resultSet.getString(5)
+                Student  student = new Student(resultSet.getInt(1),resultSet.getString(2)
+                        ,resultSet.getInt(3),resultSet.getString(5)
                         ,resultSet.getString(6),resultSet.getString(7));
                 studentList.add(student);
             }
