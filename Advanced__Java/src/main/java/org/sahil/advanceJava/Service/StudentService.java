@@ -9,7 +9,7 @@ public class StudentService {
     public  List<Student> findAll() throws Exception{
       return   StudentRepo.findAll();
     }
-    public List<Student> findById() throws Exception{
-        return StudentRepo.findById(1);
+    public List<Student> findById(int id) throws Exception{
+        return StudentRepo.findById(id);
     }
 }

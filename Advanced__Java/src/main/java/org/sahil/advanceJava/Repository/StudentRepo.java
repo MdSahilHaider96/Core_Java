@@ -1,5 +1,7 @@
 package org.sahil.advanceJava.Repository;
 
+import org.sahil.advanceJava.Model.Address;
+import org.sahil.advanceJava.Model.Qualifications;
 import org.sahil.advanceJava.Model.Student;
 import util.ConnectionUtil;
 
@@ -28,14 +30,13 @@ public class StudentRepo {
             String query = "SELECT * FROM student inner join address On student.id = address.id ";
             preparedStatement=connection.prepareStatement(query);
             resultSet=preparedStatement.executeQuery();
-            while (resultSet.next()){
+            if (resultSet.isBeforeFirst()) {
                 int id=resultSet.getInt(1);
                 String name=resultSet.getString(2);
                 int age = resultSet.getInt(3);
-                String address = resultSet.getString(4);
-                String address2 = resultSet.getString(5);
-                String address3 = resultSet.getString(6);
-                Student student = new Student(id,name,age,address,address2,address3);
+                List<Address> addressList = AddressRepo.findByStudentId(id);
+                List<Qualifications> qualificationsList= QualificationsRepo.findByStudentId(id);
+                Student student = new Student(id,name,age, addressList,qualificationsList);
                 studentList.add(student);
             }
         } catch (Exception e) {
@@ -66,14 +67,16 @@ public class StudentRepo {
         ResultSet resultSet = null;
         List<Student> studentList =  new ArrayList<>();
         try {
-            String query = "SELECT * FROM student INNER JOIN address ON student.id=address.id WHERE student.id=? ";
+            String query = "SELECT * FROM student WHERE id=? ";
             preparedStatement=connection.prepareStatement(query);
             preparedStatement.setInt(1,id);
             resultSet=preparedStatement.executeQuery();
-            while (resultSet.next()){
-                Student  student = new Student(resultSet.getInt(1),resultSet.getString(2)
-                        ,resultSet.getInt(3),resultSet.getString(5)
-                        ,resultSet.getString(6),resultSet.getString(7));
+            if (resultSet.next()) {
+                String name = resultSet.getString(2);
+                int age = resultSet.getInt(3);
+                List<Address> addressList = AddressRepo.findByStudentId(id);
+                List<Qualifications> qualificationsList = QualificationsRepo.findByStudentId(id);
+                Student student = new Student(id,name,age, addressList,qualificationsList);
                 studentList.add(student);
             }
         } catch (Exception e) {

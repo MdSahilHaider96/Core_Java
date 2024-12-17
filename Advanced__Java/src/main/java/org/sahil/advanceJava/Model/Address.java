@@ -2,6 +2,7 @@ package org.sahil.advanceJava.Model;
 
 public class Address {
     private int id;
+    private  int studentId;
     private  String address;
     private  String address2;
     private  String address3;
@@ -9,8 +10,9 @@ public class Address {
     public Address() {
     }
 
-    public Address(int id, String address, String address2, String address3) {
-        this.id = id;
+    public Address(int id, int studentId, String address, String address2, String address3) {
+        this.id=id;
+        this.studentId = studentId;
         this.address = address;
         this.address2 = address2;
         this.address3 = address3;
@@ -22,6 +24,14 @@ public class Address {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
     public String getAddress() {
@@ -50,8 +60,9 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "id=" + id +
+        return "{" +
+                " id=" + id+
+                ", studentid=" + studentId +
                 ", address='" + address + '\'' +
                 ", address2='" + address2 + '\'' +
                 ", address3='" + address3 + '\'' +
