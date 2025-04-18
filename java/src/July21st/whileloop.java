@@ -6,9 +6,7 @@ public class whileloop
         //wap to print number from 1 to 10
     int n=11;
     for (int i=0;i<n;i++){
-
             System.out.println(i++);
-    }
-
+        }
     }
 }
