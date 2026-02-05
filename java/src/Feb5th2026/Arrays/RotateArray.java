@@ -13,7 +13,6 @@ public class RotateArray {
         for (int i = 0; i < arr.length ; i++){
             rotated[(i + k) % arr.length ] = arr[i];
         }
-
         //copy array
         for (int i =0 ; i < arr.length ; i++){
             arr[i] = rotated[i];
